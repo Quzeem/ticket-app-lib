@@ -1,15 +1,12 @@
-interface Color {
-  red: number;
-  green: number;
-  blue: number;
-}
+export * from './errors/badRequestError';
+export * from './errors/customError';
+export * from './errors/notAuthenticatedError';
+export * from './errors/notFoundError';
+export * from './errors/requestValidationError';
 
-const color: Color = {
-  red: 10,
-  green: 20,
-  blue: 30,
-};
-
-console.log(color);
-
-export default color;
+export * from './middlewares/request-validators/loginValidator';
+export * from './middlewares/request-validators/signupValidator';
+export * from './middlewares/errorHandler';
+export * from './middlewares/handleValidationError';
+export * from './middlewares/isLoggedIn';
+export * from './middlewares/setCurrentUser';

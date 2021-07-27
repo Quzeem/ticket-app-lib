@@ -1,5 +1,3 @@
-import { Request } from 'express';
-
 export abstract class CustomError extends Error {
   abstract statusCode: number;
 
@@ -10,5 +8,5 @@ export abstract class CustomError extends Error {
     Object.setPrototypeOf(this, CustomError.prototype);
   }
 
-  abstract serializeErrors(req: Request): { status: string; message: string };
+  abstract serializeErrors(): { status: string; message: string };
 }

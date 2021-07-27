@@ -14,7 +14,7 @@ export class RequestValidationError extends CustomError {
   }
 
   serializeErrors() {
-    const msgs = this.errors.map((errObj) => errObj.msg);
+    const msgs = this.errors.map((errObj) => errObj.msg) as string[];
     const message = `Bad Input: ${msgs.join(', ')}`;
     return { status: 'fail', message };
   }

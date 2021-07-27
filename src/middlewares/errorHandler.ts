@@ -17,8 +17,8 @@ export const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
-  // Log error
-  console.error(err);
+  // // Log error
+  // console.log(err.message);
 
   // if (err instanceof RequestValidationError) {
   //   return res.status(err.statusCode).send(err.serializeErrors());

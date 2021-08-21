@@ -15,8 +15,8 @@ export abstract class Listener<T extends Event> {
   // Subclasses of Listener class must implement this method to handle message received
   abstract onMessage(parsedData: T['data'], msg: Message): void;
 
-  // Accessible in this class definition only
-  private client: Stan;
+  // Accessible in this class definition and its subclasses
+  protected client: Stan;
   // Accessible in this class definition and its subclasses
   protected ackWait = 5 * 1000; // 5s
 

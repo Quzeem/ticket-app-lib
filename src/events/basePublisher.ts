@@ -10,8 +10,8 @@ export abstract class Publisher<T extends Event> {
   // Name of the channel a subclass of Publisher class is going to publish to(required)
   abstract subject: T['subject'];
 
-  // Accessible in this class definition only
-  private client: Stan;
+  // Accessible in this class definition and its subclasses
+  protected client: Stan;
 
   constructor(client: Stan) {
     this.client = client;
